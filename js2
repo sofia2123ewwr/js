@@ -1,0 +1,30 @@
+function stringToArray(string){
+ return string.split(" ");
+}
+
+
+
+function DNAtoRNA(dna) {
+  var output = ''
+  for(var i =0;i<dna.length;i++) {
+     if(dna[i]=="T") {
+        output+="U"
+}
+else{output+=dna[i]}
+}
+return output;
+}
+
+const min = (list) => Math.min(...list);
+const max = (list) => Math.max(...list);
+
+function min(arr, toReturn) {
+   let result=0;
+      
+      if(toReturn ==="value"){
+        result=Math.min(...arr);
+        }else{
+           result=arr.indexOf(Math.min(...arr));
+        }
+        
+        return result;}
