@@ -28,3 +28,31 @@ function min(arr, toReturn) {
         }
         
         return result;}
+
+function warnTheSheep(queue) {
+  if (queue[queue.length -1] === 'wolf') {
+    return 'Pls go away and stop eating my sheep';
+    } else {
+     let index = queue.findIndex( (x) => x == 'wolf' );
+     return `Oi! Sheep number ${queue.length - index - 1}! You are about to be eaten by a wolf!`;
+    }
+}
+
+function maps(x){
+  let newX = [];
+  for(let i = 0; i < x.length; i++){
+        newX.push(x[i] * 2);
+    }
+    return newX;
+}
+function firstNonConsecutive (arr) {
+  for(let i = 0; i< arr.lenght; i++){
+     if (arr[i] !== arr[i-1]+1){
+       return arr[i+1];
+       }
+    
+  }
+       
+    return null;
+}
+  
