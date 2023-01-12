@@ -1,0 +1,38 @@
+7
+https://www.codewars.com/kata/54ff3102c1bad923760001f3/train/ruby
+
+def get_count(input_str)
+  input_str.count("aeiou") 
+end
+
+6
+https://www.codewars.com/kata/54e6533c92449cc251001667/train/ruby 
+def unique_in_order(iterable)
+  stack = iterable
+  if iterable.class == String
+    stack = iterable.split("")
+  end
+  
+  na = []
+  last = nil
+  stack.each do |e|
+    if last != e
+      na.append e
+    end
+    
+    last = e
+  end
+  na
+end
+
+8
+https://www.codewars.com/kata/559d2284b5bb6799e9000047
+
+def add_length(str)
+  add_length = str.split(" ")
+  result = []
+  add_length.each do |word|
+    result << "#{word} #{word.length}"
+  end
+  result
+end
