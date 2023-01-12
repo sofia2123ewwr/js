@@ -25,6 +25,31 @@ def unique_in_order(iterable)
   na
 end
 
+def unique_in_order(iterable)
+  enumerable = (iterable.is_a? String) ? iterable.split('') : iterable
+  
+  current_value = nil
+  enumerable.delete_if do |element|
+    if current_value != element
+      current_value = element
+      false
+    else
+      true
+    end
+  end
+end
+
+
+def unique_in_order(iterable)
+  #your code here
+  if iterable.is_a? String
+    str = iterable.squeeze()
+    return str.split('')
+  else
+    return iterable.uniq()
+  end
+end
+
 8
 https://www.codewars.com/kata/559d2284b5bb6799e9000047
 
